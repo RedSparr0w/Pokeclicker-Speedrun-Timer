@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "PokeClicker Speedrun Timer!",
+  "version": "1.0.0",
+  "description": "Display a speedrun timer on the pokeclicker webpage.",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.pokeclicker.com/*", "*://localhost/*"],
+      "js": ["scripts/index.js"],
+      "css": ["styles/index.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+    "matches": ["*://*.pokeclicker.com/*", "*://localhost/*"],
+    "resources": ["scripts/inject.js"]
+    }
+  ]
+}
