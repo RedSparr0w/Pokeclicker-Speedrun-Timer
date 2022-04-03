@@ -82,7 +82,7 @@
         const now = Date.now();
         const time = new Date(now - startTime);
 
-        const table = document.getElementById('timerTable');
+        const table = document.getElementById('speedrunTimerTable');
         const row = table.insertRow();
         badgeCell = row.insertCell();
         badgeCell.innerText = `${GameConstants.camelCaseToString(BadgeEnums[badge])} Badge`;
