@@ -135,6 +135,9 @@ const SpeedrunOptions = {
       // If run ended
       if (endTime) return;
 
+      // If we aren't doing a Pokedex run
+      if (SpeedrunOptions.type != SpeedrunType.kanto_pokedex) return;
+
       // Only add a split if the pokemon is new
       if (!App.game.party.alreadyCaughtPokemon(id)) {
         // Add one as we are running this method before we catch the pokemon
